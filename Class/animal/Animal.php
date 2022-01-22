@@ -81,7 +81,7 @@ class Animal{
         
     }
 
-    public function loadByChip($value){
+    protected function loadByChip($value){
         
         $sql = new Sql();
 
@@ -109,7 +109,6 @@ class Animal{
             'Especie' => $this->getEspecie(),
             'Chip' => $this->getChip()
         );
-        var_dump($results);
         $dados = json_encode($results);
         return $dados;
     }
